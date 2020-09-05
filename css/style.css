@@ -1,0 +1,238 @@
+/* ------ GENERAL ------ */
+body {
+    font-family: 'Nunito',sans-serif;
+
+}
+.navbar, .hero {
+    background: linear-gradient(90deg, #4FACFE 0%, #00F2FE 100%);
+}
+
+/* ------ NAVIGATION ------ */
+.navbar-item img {
+    max-height: 4rem;
+}
+.navbar-brand img:first-child {
+    margin-right: .5rem;
+}
+
+.navbar-link.is-active,
+.navbar-link:focus,
+.navbar-link:focus-within,
+.navbar-link:hover,
+a.navbar-item.is-active,
+a.navbar-item:focus,
+a.navbar-item:focus-within,
+a.navbar-item:hover {
+    background: unset;
+}
+
+.navbar-item, .navbar-link {
+    font-size: 18px;
+    font-weight: 600;
+    padding: .75rem .75rem;
+    background: linear-gradient(90deg, #FDFC47 0%, #24FE41 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.navbar-link.is-active,
+.navbar-link:focus,
+.navbar-link:focus-within,
+.navbar-link:hover,
+a.navbar-item.is-active,
+a.navbar-item:focus,
+a.navbar-item:focus-within,
+a.navbar-item:hover{
+   background: linear-gradient(90deg, #24FE41 0%, #FDFC47 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.navbar-end .navbar-item-order {
+    display: flex;
+    align-items: center;
+    padding: .375rem .95rem .75rem .75rem;
+    font-size: 16px;
+    text-transform: uppercase;
+    line-height: 1.5;
+    color: #004FBF !important;
+    text-shadow: 4px 4px 4px rgba(0, 1, 3, 0.16);
+    background: url(../assets/button_bckg.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+}
+
+/* animation for order button */
+.navbar-item-order {
+    -webkit-animation-name: scalex;
+    -webkit-animation-duration:3s;
+    -webkit-animation-iteration-count:infinite;
+    -webkit-animation-timing-function:ease-in-out;
+    -moz-animation-name: scale;
+    -moz-animation-duration:4s;
+    -moz-animation-iteration-count:infinite;
+    -moz-animation-timing-function:ease-in-out;
+}
+    
+    @-webkit-keyframes scalex{
+        from {-webkit-transform: scale(0.92);}
+        65% {-webkit-transform: scale(1.0);}
+        to {-webkit-transform: scale(0.92);}    
+    }
+        
+    @-moz-keyframes scale{
+        from {-moz-transform: scale(0.92);}
+        65% {-moz-transform: scale(1.0);}
+        to {-moz-transform: scale(0.92);}    
+    }
+
+
+/* ------ HERO SECTION ------ */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 68vh;
+    margin-bottom: 20vh;
+  
+}
+
+.hero::after {
+    content: ' ';
+    position: absolute;
+    background: url(../assets/divider4k.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 290px;
+    left:0;
+    bottom: -289px;
+}
+
+.hero-body {
+    display: flex;
+    align-items: center;
+}
+
+.title {
+    line-height: unset;
+}
+
+.hero .title {
+    position: relative;
+    font-weight: 900;
+    font-size: 4rem/*48px*/;
+    text-transform: uppercase;
+    text-shadow: 4px 4px 4px rgba(0, 1, 3, 0.16);
+    background: linear-gradient(90deg, #FDFC47 0%, #24FE41 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.shadow-title {
+    position: absolute;
+    top: 0;
+    font-weight: 900;
+    font-size: 4rem/*48px*/;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #FDFC47 0%, #24FE41 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero .subtitle {
+    color: white;
+}
+.subtitle:not(:last-child) {
+    margin-bottom: 4rem;
+}
+
+.hero-img {
+    display: flex;
+    justify-content: center;
+    background-image: url(../assets/cupcake_bckg.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 65%;
+}
+.hero-img img {
+    width:35%;
+}
+
+.button {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border-width: 2px;
+    border-radius: 12px 4px;
+    transition: ease-out .25s;
+}
+.buttons .button:not(:last-child):not(.is-fullwidth) {
+    margin-right: 1.5rem;
+}
+
+.button.is-link.is-outlined,
+.button.is-primary.is-outlined {
+    font-weight: 400;
+    font-family: 'Nunito', sans-serif;
+    text-transform: uppercase;
+    color: #fefefe;
+}
+
+.button.is-primary.is-outlined {
+    border-color: #004DBD;
+}
+
+.button.is-primary.is-outlined:hover {
+    border-color: #0078F0;
+    background: linear-gradient(90deg, #004DBD 0%,#0078F0  100%);
+}
+
+.button.is-link.is-outlined {
+    border-color: #0078F0;
+}
+.button.is-link.is-outlined:hover {
+    border-color: #004DBD;
+    background: transparent;
+}
+
+.button:not(:last-child) {
+    background: linear-gradient(90deg, #0078F0 0%, #004DBD 100%);
+    box-shadow: 2px 4px 8px rgba(0, 1, 3, 0.16);
+}
+
+.button:hover {
+    border-radius: 4px 12px;   
+}
+
+/* ------ PRODUCTS GRID ------ */
+.tabs {
+padding: .75rem 0;
+}
+
+.tabs ul {
+    border: unset;
+}
+
+.tabs li:not(:last-child) {
+    margin-right:2rem;
+}
+
+.tabs a {
+    padding: .5rem 2rem;
+    background-size: 100% 2px;
+    border-radius: 12px 4px;
+    text-transform: uppercase;
+    border-width: 2px;
+    border-bottom: unset;
+    box-shadow: 2px 4px 8px rgba(0, 1, 3, 0.16);
+}
+
+
+.tabs a.choco {
+    color: #fefefe;
+    background: linear-gradient(90deg, #654321 0%, #9f6934 100%);
+    border-color: #654321;
+}
+
+
+
